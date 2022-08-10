@@ -16,19 +16,19 @@
 #define TOK_BUFSIZE 128
 #define TOK_DELIM " \t\r\n\a"
 
-/* Points to an array of pointers to strings called the "environment" */
+/* environment pointer */
 extern char **environ;
 
 
 /**
- * struct data - struct that contains all relevant data on runtime
- * @av: argument vector
- * @input: command line written by the user
- * @args: tokens of the command line
- * @status: last status of the shell
- * @counter: lines counter
- * @_environ: environment variable
- * @pid: process ID of the shell
+ * struct data - data structure
+ * @av: char av
+ * @input: a char input by user
+ * @args: iinput from cmd line
+ * @status: an int
+ * @counter: an int
+ * @_environ: a char environment variable
+ * @pid: id of process a char
  */
 typedef struct data
 {
@@ -42,9 +42,9 @@ typedef struct data
 } data_shell;
 
 /**
- * struct sep_list_s - single linked list
- * @separator: ; | &
- * @next: next node
+ * struct sep_list_s - data structure linked list
+ * @separator: a char
+ * @next: next pointer
  * Description: single linked list to store separators
  */
 typedef struct sep_list_s
@@ -67,9 +67,9 @@ typedef struct line_list_s
 
 /**
  * struct r_var_list - single linked list
- * @len_var: length of the variable
- * @val: value of the variable
- * @len_val: length of the value
+ * @len_var: length
+ * @val: char value
+ * @len_val: int length
  * @next: next node
  * Description: single linked list to store variables
  */
@@ -82,9 +82,9 @@ typedef struct r_var_list
 } r_var;
 
 /**
- * struct builtin_s - Builtin struct for command args.
- * @name: The name of the command builtin i.e cd, exit, env
- * @f: data type pointer function.
+ * struct builtin_s - a struct
+ * @name: cahr name
+ * @f: pointer.
  */
 typedef struct builtin_s
 {
